@@ -1,0 +1,80 @@
+# =========================
+# C++ Build Artifacts
+# =========================
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# =========================
+# Build Directories
+# =========================
+build/
+cmake-build-*/
+out/
+bin/
+obj/
+
+# =========================
+# CMake
+# =========================
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+
+# =========================
+# JetBrains Rider / IntelliJ
+# =========================
+.idea/
+*.iml
+
+# Rider-specific
+*.sln.iml
+*.csproj.iml
+*.resharper.user
+*.DotSettings.user
+
+# =========================
+# OS Generated Files
+# =========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# =========================
+# Debug / Profiling
+# =========================
+*.pdb
+*.idb
+*.ilk
+*.log
+*.tlog
+*.gcda
+*.gcno
+*.prof
+
+# Visual Studio
+.vs/
+*.vcxproj.filters
+*.user
+*.suo

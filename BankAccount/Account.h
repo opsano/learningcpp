@@ -1,19 +1,23 @@
 #pragma once
 #include <iomanip>
 #include <iostream>
+/*
+ * account is a class, thus variables are initialized as private (unlike a struct).
+ * this class allows us to create account objects and contains functions which allow for manipulation of account data.
+ */
 class Account
 {
-
+    // two private variables for our account
     double balance_;
     double rate_;
 
 public:
-    Account() {
-        std::cout << std::fixed << std::setprecision(2);
+    Account() { // constructor for a base account
+        std::cout << std::fixed << std::setprecision(2); // this allows us to set our double to have two decimal places
         balance_ = 100.00;
         rate_ = 0.03;
     }
-    Account(double balance, double rate) {
+    Account(double balance, double rate) { // overloaded constructor which allows us to set base rate and balance
         std::cout << std::fixed << std::setprecision(2);
         balance_ = balance;
         rate_ = rate;
@@ -41,7 +45,7 @@ public:
             std::cout << "sorry, you can't withdraw negaitve amounts\n";
             return false;
         }
-        else if (withdrawAmount > balance_) {
+        if (withdrawAmount > balance_) {
             std::cout << "sorry, you can't withdraw more than you currently have\n";
             return false;
         }
@@ -56,7 +60,6 @@ public:
         }
         const double interest = balance_ * rate_ * months;
         balance_ += interest;
-
         std::cout << "your interest: " << interest << "\n";
         return true;
     }

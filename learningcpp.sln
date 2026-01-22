@@ -6,6 +6,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "romanNeumeral", "romanNeume
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BankAccount", "BankAccount\BankAccount.vcxproj", "{57D9D3B4-EBF4-4FC8-BD03-96007908A575}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "writingFiles", "writingFiles\writingFiles.vcxproj", "{00140BCF-9A24-450C-AEE5-31064FA11F69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -38,5 +40,13 @@ Global
 		{57D9D3B4-EBF4-4FC8-BD03-96007908A575}.Release|Win32.Build.0 = Release|Win32
 		{57D9D3B4-EBF4-4FC8-BD03-96007908A575}.Release|x64.ActiveCfg = Release|x64
 		{57D9D3B4-EBF4-4FC8-BD03-96007908A575}.Release|x64.Build.0 = Release|x64
+		{00140BCF-9A24-450C-AEE5-31064FA11F69}.Debug|Win32.ActiveCfg = Debug|Win32
+		{00140BCF-9A24-450C-AEE5-31064FA11F69}.Debug|Win32.Build.0 = Debug|Win32
+		{00140BCF-9A24-450C-AEE5-31064FA11F69}.Debug|x64.ActiveCfg = Debug|x64
+		{00140BCF-9A24-450C-AEE5-31064FA11F69}.Debug|x64.Build.0 = Debug|x64
+		{00140BCF-9A24-450C-AEE5-31064FA11F69}.Release|Win32.ActiveCfg = Release|Win32
+		{00140BCF-9A24-450C-AEE5-31064FA11F69}.Release|Win32.Build.0 = Release|Win32
+		{00140BCF-9A24-450C-AEE5-31064FA11F69}.Release|x64.ActiveCfg = Release|x64
+		{00140BCF-9A24-450C-AEE5-31064FA11F69}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal

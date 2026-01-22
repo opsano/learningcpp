@@ -4,27 +4,27 @@
 class Account
 {
 
-    double _balance;
-    double _rate;
+    double balance_;
+    double rate_;
 
 public:
     Account() {
         std::cout << std::fixed << std::setprecision(2);
-        _balance = 100.00;
-        _rate = 0.03;
+        balance_ = 100.00;
+        rate_ = 0.03;
     }
     Account(double balance, double rate) {
         std::cout << std::fixed << std::setprecision(2);
-        _balance = balance;
-        _rate = rate;
+        balance_ = balance;
+        rate_ = rate;
     }
 
     void displayBalance() {
-        std::cout << "Your Balance: " << _balance <<"\n";
+        std::cout << "Your Balance: " << balance_ <<"\n";
     }
 
     void displayRate() {
-        std::cout << "Your Rate: " << _rate << "\n";
+        std::cout << "Your Rate: " << rate_ << "\n";
     }
 
     bool deposit(double depositAmount) {
@@ -32,30 +32,30 @@ public:
             std::cout << "sorry, you can only deposit positive amounts\n";
             return false;
         }
-        _balance += depositAmount;
+        balance_ += depositAmount;
         return true;
     }
 
-    bool withdraw(double withdrawAmount) {
+    bool withdraw(const double withdrawAmount) {
         if (withdrawAmount <= 0) {
             std::cout << "sorry, you can't withdraw negaitve amounts\n";
             return false;
         }
-        else if (withdrawAmount > _balance) {
+        else if (withdrawAmount > balance_) {
             std::cout << "sorry, you can't withdraw more than you currently have\n";
             return false;
         }
-        _balance -= withdrawAmount;
+        balance_ -= withdrawAmount;
         return true;
     }
 
-    bool accrueInterest(int months) {
+    bool accrueInterest(const int months) {
         if (months <= 0) {
             std::cout << "sorry, you can't accrue negative months of interest\n";
             return false;
         }
-        double interest = _balance * _rate * months;
-        _balance += interest;
+        const double interest = balance_ * rate_ * months;
+        balance_ += interest;
 
         std::cout << "your interest: " << interest << "\n";
         return true;

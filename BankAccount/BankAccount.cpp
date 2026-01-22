@@ -2,6 +2,23 @@
 #include "account.h"
 void printMenu(); // function prototype;
 
+
+template <typename T>
+
+bool validateInputDatatype(const std::string question, T& out) {
+	std::cout << question;
+	std::cin >> out;
+
+	if (std::cin.fail() || std::cin.bad())
+	{
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		std::cout << "invalid input, aborting\n";
+		return false;
+	}
+	return true;
+}
+
 int main() {
 	bool result;
 	int choice = 0;
@@ -25,16 +42,11 @@ int main() {
 				break;
 			case 3:
 				double depositAmount;
-
-				std::cout << "enter depost amount: ";
-				std::cin >> depositAmount;
-
-				if (std::cin.fail()) {
-					std::cin.clear();
-					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-					std::cout << "invalid input, aborting\n";
+				if (!validateInputDatatype("enter deposit amount: ", depositAmount))
+				{
 					continue;
 				}
+			
 				result = myAccount.deposit(depositAmount);
 				if (result) {
 					std::cout << "deposit successful\n";
@@ -44,16 +56,11 @@ int main() {
 				break;
 			case 4:
 				double withdrawAmount;
-
-				std::cout << "enter withdraw amount: ";
-				std::cin >> withdrawAmount;
-
-				if (std::cin.fail()) {
-					std::cin.clear();
-					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-					std::cout << "invalid input, aborting\n";
+				if (!validateInputDatatype("enter withdraw amount: ", withdrawAmount))
+				{
 					continue;
 				}
+			
 				result = myAccount.withdraw(withdrawAmount);
 				if (result) {
 					std::cout << "withdraw successful\n";
@@ -63,17 +70,11 @@ int main() {
 				break;
 			case 5:
 				int months;
-
-				std::cout << "enter number of months to accrue: ";
-				std::cin >> months;
-
-				if (std::cin.fail()) {
-					std::cin.clear();
-					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-					std::cout << "invalid input, aborting\n";
+				if (!validateInputDatatype("enter number of months to accrue: ", months))
+				{
 					continue;
 				}
-
+			
 				result = myAccount.accrueInterest(months);
 				if (result) {
 					std::cout << "accural successful\n";

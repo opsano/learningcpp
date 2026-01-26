@@ -78,3 +78,9 @@ Desktop.ini
 *.vcxproj.filters
 *.user
 *.suo
+
+x64/
+
+*.txt
+
+*.vcxproj

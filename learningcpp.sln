@@ -8,6 +8,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BankAccount", "BankAccount\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "writingFiles", "writingFiles\writingFiles.vcxproj", "{00140BCF-9A24-450C-AEE5-31064FA11F69}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "customVectorClass", "customVectorClass\customVectorClass.vcxproj", "{BB78E1B9-AD6B-4722-97B8-CEA310D10B7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -48,5 +50,13 @@ Global
 		{00140BCF-9A24-450C-AEE5-31064FA11F69}.Release|Win32.Build.0 = Release|Win32
 		{00140BCF-9A24-450C-AEE5-31064FA11F69}.Release|x64.ActiveCfg = Release|x64
 		{00140BCF-9A24-450C-AEE5-31064FA11F69}.Release|x64.Build.0 = Release|x64
+		{BB78E1B9-AD6B-4722-97B8-CEA310D10B7E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BB78E1B9-AD6B-4722-97B8-CEA310D10B7E}.Debug|Win32.Build.0 = Debug|Win32
+		{BB78E1B9-AD6B-4722-97B8-CEA310D10B7E}.Debug|x64.ActiveCfg = Debug|x64
+		{BB78E1B9-AD6B-4722-97B8-CEA310D10B7E}.Debug|x64.Build.0 = Debug|x64
+		{BB78E1B9-AD6B-4722-97B8-CEA310D10B7E}.Release|Win32.ActiveCfg = Release|Win32
+		{BB78E1B9-AD6B-4722-97B8-CEA310D10B7E}.Release|Win32.Build.0 = Release|Win32
+		{BB78E1B9-AD6B-4722-97B8-CEA310D10B7E}.Release|x64.ActiveCfg = Release|x64
+		{BB78E1B9-AD6B-4722-97B8-CEA310D10B7E}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal

@@ -12,27 +12,36 @@ class Account
     double rate_;
 
 public:
-    Account() { // constructor for a base account
+    Account()
+    {
+        // constructor for a base account
         std::cout << std::fixed << std::setprecision(2); // this allows us to set our double to have two decimal places
         balance_ = 100.00;
         rate_ = 0.03;
     }
-    Account(double balance, double rate) { // overloaded constructor which allows us to set base rate and balance
+
+    Account(double balance, double rate)
+    {
+        // overloaded constructor which allows us to set base rate and balance
         std::cout << std::fixed << std::setprecision(2);
         balance_ = balance;
         rate_ = rate;
     }
 
-    void displayBalance() {
-        std::cout << "Your Balance: " << balance_ <<"\n";
+    void displayBalance()
+    {
+        std::cout << "Your Balance: " << balance_ << "\n";
     }
 
-    void displayRate() {
+    void displayRate()
+    {
         std::cout << "Your Rate: " << rate_ << "\n";
     }
 
-    bool deposit(double depositAmount) {
-        if (depositAmount <= 0) {
+    bool deposit(double depositAmount)
+    {
+        if (depositAmount <= 0)
+        {
             std::cout << "sorry, you can only deposit positive amounts\n";
             return false;
         }
@@ -40,12 +49,15 @@ public:
         return true;
     }
 
-    bool withdraw(const double withdrawAmount) {
-        if (withdrawAmount <= 0) {
+    bool withdraw(const double withdrawAmount)
+    {
+        if (withdrawAmount <= 0)
+        {
             std::cout << "sorry, you can't withdraw negaitve amounts\n";
             return false;
         }
-        if (withdrawAmount > balance_) {
+        if (withdrawAmount > balance_)
+        {
             std::cout << "sorry, you can't withdraw more than you currently have\n";
             return false;
         }
@@ -53,8 +65,10 @@ public:
         return true;
     }
 
-    bool accrueInterest(const int months) {
-        if (months <= 0) {
+    bool accrueInterest(const int months)
+    {
+        if (months <= 0)
+        {
             std::cout << "sorry, you can't accrue negative months of interest\n";
             return false;
         }
@@ -63,6 +77,4 @@ public:
         std::cout << "your interest: " << interest << "\n";
         return true;
     }
-
 };
-
